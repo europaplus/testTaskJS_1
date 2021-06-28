@@ -45,6 +45,7 @@ const forms = (state) => {
 			}
 			postData('assets/server.php', formData)
 				.then(res => {
+					console.log(res);
 					statusMessage.textContent = message.success;
 				})
 				.catch(() => statusMessage.textContent = message.failure)
@@ -53,6 +54,7 @@ const forms = (state) => {
 					setTimeout(() => {
 						statusMessage.remove();
 					}, 5000);
+					console.log()
 				});
 		});
 	});
